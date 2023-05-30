@@ -1,0 +1,56 @@
+let bankSbi={
+    bankName:"Union Bank",
+    accountNo:4358293,
+    IfscCode:"st4567",
+    branch:"Pune",
+}
+
+
+let bankLocation={
+    street:"MG RadioNodeList",
+    city:"pune",
+    pin:410501,
+
+}
+console.log(`--------------------clone object of bankSbi and Banklocation-------------------`)
+Object.assign(bankSbi,bankLocation);
+console.table(bankSbi);
+// console.table(bankLocation);
+
+
+
+
+
+let rateofInterest={
+        homeLoanInterest:'8.90',
+        personalLoanInterest:`6.78`,
+        dueInterest:`9.0`,
+}
+// console.table(rateofInterest);
+console.log(`-----------------sbiDetails got after merging----------------------`)
+const mergedObject = Object.assign(bankSbi, bankLocation, rateofInterest);
+console.table(mergedObject);
+
+
+console.log("*************************Traversing an Object ****************************");
+for (const key in mergedObject) { // key = "height"
+    if (Object.hasOwnProperty.call(mergedObject, key)) {
+        const value = mergedObject[key];
+        console.log(`${key}, ${value}`);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
